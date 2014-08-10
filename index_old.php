@@ -1,4 +1,3 @@
-<?php require 'config/db.php';?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,10 +15,11 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <?php require 'config.php';?>
   </head>
   <body>
   <div class="container">
-    <?php include 'lib/db/test.php';?>
+    <?php include 'db_test.php';?>
     <h1>庫存管理</h1><hr/>
     <div class="panel panel-default">
     <div class="panel-heading">庫存總覽</div>
@@ -120,7 +120,6 @@
             <tr><td>選擇</td><td>產品類別</td><td>產品名稱</td><td>規格</td><td>製造日期</td><td>效期</td><td>數量</td><td>狀態</td>
             <td>使用者</td><td>入取時間</td><td>更新時間</td></tr>
     <?php
-      /*
       $con=mysqli_connect(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 
       // Check connection
@@ -147,7 +146,6 @@
           echo "</tr>";
       }
       mysqli_close($con);
-      */
     ?>
         </table>
         <ul class="pagination">
